@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ServiceItem({ imageUrl, title }: any) {
   return (
-    <article className="bg-[#1D233D] py-5 md:py-10 px-6 w-fit rounded-xl">
+    <article data-aos="fade-up" data-aos-delay="600" className="bg-[#1D233D] py-5 md:py-10 px-6 w-fit rounded-xl">
       <div className="relative h-[180px] md:h-[250px] w-full mb-3">
         <Image
           src={imageUrl}

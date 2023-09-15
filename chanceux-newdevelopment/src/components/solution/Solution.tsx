@@ -1,10 +1,26 @@
 import Image from "next/image";
 import Title from "../title/Title";
 
-const SingleItem = ({ text, para, imageUrl, bgColor }: any) => {
+type SolColor = {
+  [key: string]: string;
+};
+
+const SingleItem = ({ text, para, imageUrl, bgProp }: any) => {
+  const solColor: SolColor = {
+    solOne: "bg-solColor_1",
+    solTwo: "bg-solColor_2",
+    solThree: "bg-solColor_3",
+    solFour: "bg-solColor_4",
+    solFive: "bg-solColor_5",
+    solLast: "bg-solColor_6",
+  };
+  const bgColor = solColor[bgProp];
+
   return (
     <div
-      className={`bg-blue-500 rounded-2xl pt-5 md:pt-8 px-5 md:px-7 max-h-fit flex flex-col justify-between`}
+      data-aos="fade-up"
+      data-aos-delay="600"
+      className={`${bgColor} rounded-2xl pt-5 md:pt-8 px-5 md:px-7 max-h-fit flex flex-col justify-between`}
     >
       <h4 className="text-white text-2xl md:text-3xl font-semibold mb-3">
         {text}
@@ -28,41 +44,41 @@ const Solution = () => {
       <div className="text-center">
         <Title children="SOLUTIONS" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 my-8">
         <SingleItem
-          bgColor="solColor-1"
+          bgProp="solOne"
           imageUrl="https://i.postimg.cc/QtxgMdbz/Group-2.png"
           text="Application Development"
           para="Lorem ipsum dolor sit amet. Ea sint odio ad perspiciatis dolorum qui autem facilis."
         />
         <SingleItem
-          bgColor="solColor-2"
-          imageUrl="https://i.postimg.cc/FRzQ99XF/0000.png"
+          bgProp="solTwo"
+          imageUrl="https://i.postimg.cc/nrjt26nY/Group-1-1.png"
           text="Digital commerce"
           para="Lorem ipsum dolor sit amet. Ea sint odio ad perspiciatis dolorum qui autem facilis."
         />
         <SingleItem
-          bgColor="solColor-3"
+          bgProp="solThree"
           imageUrl="https://i.postimg.cc/FRzQ99XF/0000.png"
           text="Accelerated Quality And
 Test Engineering"
           para="Lorem ipsum dolor sit amet. Ea sint odio ad perspiciatis dolorum qui autem facilis."
         />
         <SingleItem
-          bgColor="solColor-4"
+          bgProp="solFour"
           imageUrl="https://i.postimg.cc/525Jg7mJ/Image.png"
           text="Application Managed Services"
           para="Lorem ipsum dolor sit amet. Ea sint odio ad perspiciatis dolorum qui autem facilis."
         />
         <SingleItem
-          bgColor="solColor-5"
+          bgProp="solFive"
           imageUrl="https://i.postimg.cc/KY3gzgS4/Business-0003.png"
           text="Development And
 Operations"
           para="Lorem ipsum dolor sit amet. Ea sint odio ad perspiciatis dolorum qui autem facilis."
         />
         <SingleItem
-          bgColor="solColor-6"
+          bgProp="solLast"
           imageUrl="https://i.postimg.cc/qgVfXyhg/0005.png"
           text="Search engine optimization"
           para="Lorem ipsum dolor sit amet. Ea sint odio ad perspiciatis dolorum qui autem facilis."

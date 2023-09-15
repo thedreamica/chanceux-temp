@@ -3,13 +3,22 @@ import { useState } from "react";
 import Menu from "./menu";
 import CloseIcon from "./CloseIcon";
 
-const Item = ({ link, text }: any) => {
+const Item = ({ link, text, isActive }: any) => {
+  const [activeCol, setActiveCol] = useState(isActive);
+
+  const handleCol = () => {
+    setActiveCol(true);
+  };
   return (
-    <div>
-      <a className="text-base md:text-xl font-medium capitalize" href={link}>
-        {text}
-      </a>
-    </div>
+    <a
+      onClick={handleCol}
+      className={`text-base md:text-xl font-medium capitalize text-${
+        activeCol ? "custom_orange" : "white"
+      }`}
+      href={link}
+    >
+      {text}
+    </a>
   );
 };
 
@@ -20,23 +29,23 @@ const Navbar = () => {
     setShowNav(!showNav);
   };
   return (
-    <header className="bg-nav-bg backdrop-blur-md py-3 md:py-6 flex justify-end px-6 md:px-20 items-center">
+    <header className="bg-nav-bg backdrop-blur-md py-3 md:py-5 flex justify-end px-0 md:px-20 items-center fixed w-screen z-10">
       <nav
         className={`${
-          showNav ? "block" : "hidden"
-        } md:grid grid-cols-5 gap-10 w-fit items-center`}
+          showNav ? "grid" : "hidden"
+        } md:grid md:grid-cols-5 gap-10 md:w-fit items-center absolute md:relative -bottom-96 md:-bottom-0 grid-cols-1 place-items-center bg-black md:bg-transparent w-screen py-11 md:py-0`}
       >
-        <Item link="" text="home" />
+        <Item link="" text="home" isActive={true} />
         <Item link="" text="about" />
         <Item link="services" text="services" />
         <Item link="" text="testimonials" />
         <a href="/">
-          <button className="text-base md:text-xl font-medium capitalize border-[#885FF5] border-2 py-2 px-5 rounded-3xl">
+          <button className="text-white text-base md:text-xl font-medium capitalize border-[#885FF5] border-2 py-2 px-5 rounded-3xl">
             contact us
           </button>
         </a>
       </nav>
-      <button onClick={handleNav} className="block md:hidden">
+      <button onClick={handleNav} className="block md:hidden mr-4">
         {showNav ? (
           <CloseIcon className="w-10 h-10" />
         ) : (
