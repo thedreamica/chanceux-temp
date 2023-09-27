@@ -1,6 +1,4 @@
 import Banner from "@/components/services/banner";
-import Item from "./item";
-import Image from "next/image";
 import Navbar from "@/components/navbar/Navbar";
 import Serviceitems from "@/components/services/serviceItems";
 import Prompts from "@/components/services/prompts";

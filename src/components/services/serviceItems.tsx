@@ -1,6 +1,6 @@
 const Item = ({ imgsrc, heading, content }: any) => {
   return (
-    <div className="w-[30%] bg-[#ffffff12] rounded-xl flex flex-col gap-5 mb-[100px] items-center pb-9 px-9">
+    <div className="w-full sm:w-[30%] bg-[#ffffff12] rounded-xl flex flex-col gap-5 mb-[100px] items-center pb-9 px-9">
       <img className="w-64 mt-[-100px]" src={`/static/images/${imgsrc}`} />
       <p className="text-2xl font-bold text-white">{heading}</p>
       <p className="text-xl font-bold text-gray-200 text-center">{content}</p>
@@ -49,7 +49,7 @@ const items = [
 
 const Serviceitems = () => {
   return (
-    <section className="flex flex-col items-center px-40 pt-24">
+    <section className="flex flex-col items-center px-4 sm:px-40 pt-12 sm:pt-52">
       <p className="text-4xl font-semibold text-white mb-5">
         Where Passion Meets Creativity!
       </p>
