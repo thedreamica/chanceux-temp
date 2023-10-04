@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./data";
-import RenderIcons from "../common/renderIcons";
+import RenderIcon from "../common/renderIcon";
 import ArrowRight from "@/icons/arrowRight";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ const Services = () => {
               className="rounded-3xl bg-[#8ce2e333] p-8 w-full sm:w-[30%]"
             >
               <div className="p-4 bg-gradient-to-r from-indigo-800 to-indigo-400 w-fit rounded-lg mb-12">
-                {RenderIcons({type: iconType, ...iconProps})}
+                {RenderIcon({type: iconType, ...iconProps})}
               </div>
               <h5 className="text-white text-2xl font-bold capitalize mb-2">
                 {title}

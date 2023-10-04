@@ -5,7 +5,7 @@ import Code from "@/icons/code";
 import Test from "@/icons/test";
 import Wand from "@/icons/wand";
 
-const RenderIcons = ({ type, ...rest }: { type: string }) => {
+const RenderIcon = ({ type, ...rest }: { type: string }) => {
   switch (type) {
     case "BULLHORN": {
       return <BullHorn {...rest} />;
@@ -28,4 +28,4 @@ const RenderIcons = ({ type, ...rest }: { type: string }) => {
   }
 };
 
-export default RenderIcons;
+export default RenderIcon;
