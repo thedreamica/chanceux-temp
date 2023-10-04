@@ -3,10 +3,10 @@ const Tile = () => {
       <div className="h-[400px] w-[240px] relative rounded-lg overflow-hidden">
         <img src="https://placehold.co/240x400/darkcyan/darkcyan" />
         <div className="flex flex-col bg-gradient-to-t from-slate-900 to-transparent absolute top-0 left-0 h-full p-4">
-          <p className="text-lg font-semibold mt-auto">
+          <p className="text-white text-lg font-semibold mt-auto">
             Nisi dolor do dolore adipisicing ex non sit
           </p>
-          <p className="mt-20 text-sm font-semibold">
+          <p className="text-white mt-20 text-sm font-semibold">
             Laboris officia tempor do velit anim in pariatur laborum officia. Sunt
             dolor id quis mollit irure ex est Lorem nisi et non. Cupidatat in ut
             sint nisi adipisicing ad culpa.
