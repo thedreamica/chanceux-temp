@@ -12,11 +12,11 @@ const ContactItem = ({ type, title, content }: any) => {
 
 const GetInTouch = () => {
   return (
-    <section className="flex flex-col items-center mt-20 px-44">
-      <p className="text-white font-bold text-3xl mb-[70px]">
+    <section className="flex flex-col items-center mt-20 px-6 sm:px-44">
+      <p className="text-white font-bold text-3xl mb-10 sm:mb-[70px]">
         Get in Touch with us
       </p>
-      <div className="flex justify-between w-full">
+      <div className="flex flex-col gap-10 sm:flex-row justify-between w-full">
         <ContactItem type="MAIL" title="Email" content="info@chanceuxinc.com" />
         <ContactItem
           type="LOCATION"
@@ -25,23 +25,23 @@ const GetInTouch = () => {
         />
         <ContactItem type="PHONE" title="Phone" content="+91 8686868686" />
       </div>
-      <div className="flex items-center justify-between mt-[70px]">
-        <form className="flex flex-col w-[48%] gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-32 items-center mt-[70px]">
+        <form className="flex flex-col w-full gap-8">
           <div className="flex flex-col gap-2">
             <label className="text-white text-lg">Name</label>
-            <input className="rounded-lg p-4 outline-none border-none" />
+            <input className="rounded-lg p-2 sm:p-4 outline-none border-none" />
           </div>
           <div className="flex flex-col gap-2">
             <label className="text-white text-lg">Email</label>
-            <input className="rounded-lg p-4 outline-none border-none" />
+            <input className="rounded-lg p-2 sm:p-4 outline-none border-none" />
           </div>
           <div className="flex flex-col gap-2">
             <label className="text-white text-lg">Your message</label>
-            <textarea className="rounded-lg p-4 outline-none border-none h-36" />
+            <textarea className="rounded-lg p-2 sm:p-4 outline-none border-none h-36" />
           </div>
-          <input type="submit" className="bg-[#00898a] p-4 rounded-lg w-1/3"/>
+          <input type="submit" className="bg-[#00898a] p-2 sm:p-4 rounded-lg w-1/3 font-medium mx-auto sm:mx-0" />
         </form>
-        <div className="w-[48%]">
+        <div className="w-full h-auto sm:w-[80%] object-cover">
           <img src="/static/images/about/form.png" />
         </div>
       </div>

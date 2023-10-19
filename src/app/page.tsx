@@ -10,15 +10,15 @@ import CTA from "@/components/cta";
 
 export default function Home() {
   return (
-    <main className="bg-[#00030A]">
-      {/* <Navbar /> */}
+    <main className="bg-[#00030A] overflow-hidden">
+      <Navbar />
       <Hero />
       <Services />
       <Features />
       <Regime />
+      <CTA />
       <OurProjects />
       <Testimonials />
-      <CTA />
       <Footer />
     </main>
   );
