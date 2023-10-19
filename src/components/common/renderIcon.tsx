@@ -8,7 +8,7 @@ import Location from "@/icons/location";
 import Test from "@/icons/test";
 import Wand from "@/icons/wand";
 
-const RenderIcon = ({ type, ...rest }: { type: string }) => {
+const RenderIcon = ({ type, ...rest }: { className: string; type: any; }) => {
   switch (type) {
     case "BULLHORN": {
       return <BullHorn {...rest} />;
