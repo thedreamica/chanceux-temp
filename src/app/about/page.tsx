@@ -8,7 +8,7 @@ const Aboutus = () => {
     <Banner />
     <Metrics/>
     <Team />
-    <GetInTouch />
+    {/* <GetInTouch /> */}
   </div>
 }
 
