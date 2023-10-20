@@ -1,32 +1,25 @@
-import React from "react";
+import Facebook from "@/icons/facebook";
+import LinkedIn from "@/icons/linkedIn";
+import X from "@/icons/x";
 
 const Footer = () => {
   return (
-    <section className="px-6 pt-6 pb-3 md:px-40 md:pt-10">
-      <div className="flex justify-center items-center flex-col h-auto md:h-[40vh] gap-6">
-        <h1 className="text-white text-4xl md:text-7xl font-bold capitalize text-center">
-          lorem agency
+    <section className="px-6 pt-6 pb-6 sm:pb-10 md:px-40 md:pt-10 relative">
+      <img className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0" src="/static/images/landing/footer_bg.png" alt="" />
+      <div className="flex justify-center items-center flex-col h-auto md:h-[40vh] gap-6 z-10 relative">
+        <h1 className="text-white text-2xl sm:text-4xl font-bold capitalize text-center sm:w-1/2 w-full leading-normal"> 
+          Get Ready To Leverage Our Digital Services
         </h1>
-        <p className="text-white w-full md:w-2/6 text-center text-md">
-          Lorem ipsum dolor sit amet consectetu cumque?
-        </p>
-        <button className="text-white text-lg capitalize rounded-lg bg-purple-600 h-fit w-fit py-2 px-10">
-          get started
+        <button className="text-base sm:text-lg font-semibold capitalize rounded-3xl bg-custom_blue h-fit w-fit py-2 sm:py-3 px-6 sm:px-10">
+          Start Now
         </button>
       </div>
-      {/* copyrights */}
-      <div className="flex justify-between">
-        <p className="text-white text-xs md:text-sm font-light">
-          Lorem ipsum dolor sit amet consectetur.
-        </p>
-        <div className="flex gap-5">
-          <p className="text-white text-xs md:text-sm font-light">
-            Lorem ipsum dolor sit amet
-          </p>
-          <p className="text-white text-xs md:text-sm font-light">
-            Lorem ipsum dolor sit amet
-          </p>
-        </div>
+      <div className="flex justify-between mt-20 sm:mt-10">
+        <LinkedIn className="fill-white h-6" />
+        <X className="fill-white h-6" />
+        <Facebook className="fill-white h-6" />
+        <LinkedIn className="fill-white h-6" />
+        <Facebook className="fill-white h-6" />
       </div>
     </section>
   );
