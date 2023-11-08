@@ -6,8 +6,8 @@ import Footer from "@/components/footer/Footer";
 
 const services = () => {
   return (
-    <div className="bg-gradient-to-b from-[#0e0d27] to-[#0a0722]">
-      {/* <Navbar/> */}
+    <div className="bg-gradient-to-b from-[#0e0d27] to-[#0a0722] overflow-hidden">
+      <Navbar />
       <Banner />
       <Serviceitems/>
       <Prompts />

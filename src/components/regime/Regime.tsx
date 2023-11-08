@@ -10,7 +10,7 @@ const Regime = () => {
         <img className="z-10 relative" src="/static/images/landing/blog_stockmarket.png" />
       </div>
       <div className="w-full sm:w-[40%] order-1 md:order-2">
-        <h3 className="text-white w-full md:w-3/4 text-3xl font-bold leading-snug mb-6 capitalize">
+        <h3 className="text-white w-full md:w-3/4 text-2xl font-bold leading-snug mb-6 capitalize">
           Regime Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </h3>
         <p className="text-sm text-slate-400 leading-relaxed w-full mb-6">
